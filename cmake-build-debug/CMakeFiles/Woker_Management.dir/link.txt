@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Woker_Management.dir/main.cpp.o CMakeFiles/Woker_Management.dir/workerManagement.cpp.o CMakeFiles/Woker_Management.dir/personnel.cpp.o CMakeFiles/Woker_Management.dir/finance.cpp.o CMakeFiles/Woker_Management.dir/gmo.cpp.o CMakeFiles/Woker_Management.dir/sales.cpp.o CMakeFiles/Woker_Management.dir/production.cpp.o  -o Woker_Management 
