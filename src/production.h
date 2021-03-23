@@ -12,7 +12,7 @@ using namespace std;
 class Production : public Worker {
 public:
 
-    Production(int id, string name, int department, int position, int salary);
+    Production(string id, string name, int department, int position, int salary);
 
     virtual void get_Info();
     virtual string get_Department();

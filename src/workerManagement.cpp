@@ -15,14 +15,14 @@ workerManagement::~workerManagement() {
 
 void workerManagement::drawMenu() {
     cout << "-----------------------------\n"
-         << "########   主菜单     ########\n"
-         << "######  1.增加职工信息  #######\n"
-         << "######  2.显示职工信息  #######\n"
-         << "######  3.删除离职员工  #######\n"
-         << "######  4.编辑职工信息  #######\n"
-         << "######  5.查找职工信息  #######\n"
-         << "######  6.重置系统     #######\n"
-         << "######  0.退出系统     #######\n"
+         << "########     Menu      #########\n"
+         << "######   1.Add Worker     #######\n"
+         << "######   2.Show Worker(s) #######\n"
+         << "######   3.Delete Worker  #######\n"
+         << "######   4.Edit Worker    #######\n"
+         << "######   5.Find Worker    #######\n"
+         << "######   6.Reset          #######\n"
+         << "######   0.Exit          #######\n"
          << "-----------------------------" << endl;
     cout << "_User_# ";
 }
@@ -59,7 +59,7 @@ void workerManagement::addWorker() {
             }
         }
         for (int j = 0; j < addNum; ++j) {
-            int tempId;
+            string tempId;
             string tempName;
             int tempDept;
             int tempPost;
@@ -114,8 +114,9 @@ void workerManagement::addWorker() {
         else
             cout << "Successfully add " << addNum << " workers" << endl;
     }
-    /*****  写文件  *****/
+    /*****  �����ļ�  *****/
     this->saveRecord();
+    PAUSE
 }
 
 void workerManagement::showWorkers() {

@@ -13,7 +13,7 @@ using namespace std;
 
 class Worker {
 public:
-    int w_Id;
+    string w_Id;
     string w_Name;
     int w_Department;
     int w_Position;

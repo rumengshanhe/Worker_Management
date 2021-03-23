@@ -5,7 +5,7 @@
 #include "personnel.h"
 #include <utility>
 
-Personnel::Personnel(int id, string name, int department, int position, int salary) {
+Personnel::Personnel(string id, string name, int department, int position, int salary) {
     this->w_Id = id;
     this->w_Name = std::move(name);
     this->w_Department = department;

@@ -12,7 +12,7 @@
 #include "gmo.h"
 #include "sales.h"
 #include "production.h"
-#define PAUSE cout<<"Press Enter to Continue..."<<endl;getchar();getchar();
+#define PAUSE system("pause");
 #define FILE_NAME "record.txt"
 
 using namespace std;

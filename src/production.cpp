@@ -2,9 +2,9 @@
 // Created by root on 2021/3/11.
 //
 
-#include "sales.h"
+#include "production.h"
 
-Sales::Sales(int id, string name, int department, int position, int salary) {
+Production::Production(string id, string name, int department, int position, int salary) {
     this->w_Id = id;
     this->w_Name = std::move(name);
     this->w_Department = department;
@@ -12,7 +12,7 @@ Sales::Sales(int id, string name, int department, int position, int salary) {
     this->w_Salary = salary;
 }
 
-void Sales::get_Info() {
+void Production::get_Info() {
     cout << "Worker ID: " << this->w_Id
          << "\tName: " << this->w_Name
          << "\tDepartment: " << this->get_Department()
@@ -20,11 +20,11 @@ void Sales::get_Info() {
          << "\tSalary: " << this->w_Salary << endl;
 }
 
-string Sales::get_Department() {
-    return "Sales";
+string Production::get_Department() {
+    return "Production";
 }
 
-string Sales::get_Position() {
+string Production::get_Position() {
     switch (this->w_Position) {
         case 1:
             return "Manager";

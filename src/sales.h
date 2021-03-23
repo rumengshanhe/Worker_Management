@@ -12,7 +12,7 @@ using namespace std;
 class Sales : public Worker {
 public:
 
-    Sales(int id, string name, int department, int position, int salary);
+    Sales(string id, string name, int department, int position, int salary);
 
     virtual void get_Info();
     virtual string get_Department();

@@ -12,7 +12,7 @@ using namespace std;
 class GMO : public Worker {
 public:
 
-    GMO(int id, string name, int department, int position, int salary);
+    GMO(string id, string name, int department, int position, int salary);
 
     virtual void get_Info();
     virtual string get_Department();

@@ -1,10 +1,10 @@
 //
-// Created by root on 2021/3/10.
+// Created by root on 2021/3/11.
 //
 
-#include "gmo.h"
+#include "sales.h"
 
-GMO::GMO(int id, string name, int department, int position, int salary) {
+Sales::Sales(string id, string name, int department, int position, int salary) {
     this->w_Id = id;
     this->w_Name = std::move(name);
     this->w_Department = department;
@@ -12,7 +12,7 @@ GMO::GMO(int id, string name, int department, int position, int salary) {
     this->w_Salary = salary;
 }
 
-void GMO::get_Info() {
+void Sales::get_Info() {
     cout << "Worker ID: " << this->w_Id
          << "\tName: " << this->w_Name
          << "\tDepartment: " << this->get_Department()
@@ -20,16 +20,16 @@ void GMO::get_Info() {
          << "\tSalary: " << this->w_Salary << endl;
 }
 
-string GMO::get_Department() {
-    return "General Manager Office";
+string Sales::get_Department() {
+    return "Sales";
 }
 
-string GMO::get_Position() {
+string Sales::get_Position() {
     switch (this->w_Position) {
         case 1:
-            return "CEO";
+            return "Manager";
         case 2:
-            return "Secretary";
+            return "General Staff";
         default:
             return "None";
     }
