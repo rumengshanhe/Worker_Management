@@ -88,6 +88,7 @@ int workerManagement::getWorkerNum() {
     ifs.close();
     return num;
 }
+
 void workerManagement::initRecord() const {
     ifstream ifs;
     ifs.open(FILE_NAME, ios::in);
@@ -183,6 +184,7 @@ void workerManagement::sortById() {
         }
     }
     this->displayWorker(sortArray, this->currentNum);
+    delete[] sortArray;
     PAUSE
 }
 
@@ -200,6 +202,7 @@ void workerManagement::sortByDept() {
         }
     }
     this->displayWorker(sortArray, this->currentNum);
+    delete[] sortArray;
     PAUSE
 }
 
@@ -219,11 +222,12 @@ void workerManagement::sortBySalary() {
         }
     }
     this->displayWorker(sortArray, this->currentNum);
+    delete[] sortArray;
     PAUSE
 }
 
 void workerManagement::addWorker() {
-    cout << "How many workers added ? : ";
+    cout << "How many workers added ?\n_# ";
     int addNum = 0;
     int newNum;
     cin >> addNum;
@@ -247,23 +251,24 @@ void workerManagement::addWorker() {
             int tempSalary;
 
             cout << "Begin to add No." << j + 1 << " worker." << endl;
-            cout << "Enter worker's name :";
+            cout << "Enter worker's name :\n_# ";
             cin >> tempName;
-            cout << "Enter worker's ID :";
+            cout << "Enter worker's ID :\n_# ";
             cin >> tempId;
             cout << "Choose worker's department :\n"
-                 << "1.GMO - 2.Personnel - 3.Finance - 4.Sales - 5.Production"
+                 << "1.GMO - 2.Personnel - 3.Finance - 4.Sales - "
+                    "5.Production\n_# "
                  << endl;
             cin >> tempDept;
             if (tempDept == 1) {
                 cout << "Choose worker's position :\n"
-                     << "1.CEO - 2.Secretary " << endl;
+                     << "1.CEO - 2.Secretary \n_# " << endl;
             } else {
                 cout << "Choose worker's position :\n"
-                     << "1.Manager - 2.General Staff " << endl;
+                     << "1.Manager - 2.General Staff \n_# " << endl;
             }
             cin >> tempPost;
-            cout << "Enter worker's salary :";
+            cout << "Enter worker's salary :\n_# ";
             cin >> tempSalary;
 
             Worker *newWorker = nullptr;
@@ -361,12 +366,85 @@ void workerManagement::deleteWorker() {
         cout << "Successfully delete." << endl;
         this->saveRecord();
         PAUSE
-    } else {
-        return;
     }
+    delete[] index;
+    delete[] searchArray;
+    return;
 }
 
-void workerManagement::editWorker() {}
+void workerManagement::editWorker() {
+    string editStr;
+    int num = 0;
+    int *index = new int[this->currentNum];
+    Worker **searchArray = new Worker *[this->currentNum];
+
+    while (num != 1) {
+        num = 0;
+        cout << "Enter ID or Name to edit.\n_# ";
+        cin >> editStr;
+        for (int i = 0; i < this->currentNum; i++) {
+            if (this->workerArray[i]->w_Name == editStr ||
+                this->workerArray[i]->w_Id == editStr) {
+                searchArray[num] = this->workerArray[i];
+                index[num++] = i;
+            }
+        }
+        this->displayWorker(searchArray, num);
+        if (num > 1) {
+            cout << "Please specify one worker by ID !" << endl;
+            PAUSE
+        }
+    }
+    int select = 9;
+    while (select != 0) {
+        cout << "Select to edit :\n1.ID - 2.Name - 3.Department - 4.Position - "
+                "5.Salary - 0.exit\n_# ";
+        cin >> select;
+        string str;
+        int temp;
+        switch (select) {
+        case 1:
+            cout << "Enter new ID :\n_# ";
+            cin >> str;
+            this->workerArray[index[0]]->w_Id = str;
+            break;
+        case 2:
+            cout << "Enter new Name :\n_# ";
+            cin >> str;
+            this->workerArray[index[0]]->w_Name = str;
+            break;
+        case 3:
+            cout << "Choose new Department :\n1.GMO - 2.Personnel - 3.Finance "
+                    "- 4.Sales - 5.Production_# ";
+            cin >> temp;
+            this->workerArray[index[0]]->w_Department = temp;
+            break;
+        case 4:
+            if (this->workerArray[index[0]]->w_Department == 1) {
+                cout << "Choose new position :\n"
+                     << "1.CEO - 2.Secretary " << endl;
+            } else {
+                cout << "Choose new position :\n"
+                     << "1.Manager - 2.General Staff " << endl;
+            }
+            cin >> temp;
+            this->workerArray[index[0]]->w_Position = temp;
+            break;
+        case 5:
+            cout << "Enter new Salary :\n_# ";
+            cin >> temp;
+            this->workerArray[index[0]]->w_Salary = temp;
+            break;
+        case 0:
+        default:
+            break;
+        }
+    }
+    this->saveRecord();
+    delete[] searchArray;
+    delete[] index;
+    return;
+}
 
 void workerManagement::searchWorker() {
     string searchStr;
@@ -381,7 +459,18 @@ void workerManagement::searchWorker() {
         }
     }
     this->displayWorker(searchArray, index);
+    delete[] searchArray;
     PAUSE
 }
 
-void workerManagement::resetSystem() {}
+void workerManagement::resetSystem() {
+    cout << "Confirm to Delete All Record !!! (y/n)\n_# ";
+    char ch;
+    cin >> ch;
+    if (ch == 'y' || ch == 'Y') {
+        delete[] this->workerArray;
+        this->workerArray = nullptr;
+        this->currentNum = 0;
+        this->saveRecord();
+    }
+}
