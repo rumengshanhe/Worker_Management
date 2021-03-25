@@ -4,23 +4,23 @@
 #ifndef WORKER_MANAGEMENT_WORKERMANAGEMENT_H
 #define WORKER_MANAGEMENT_WORKERMANAGEMENT_H
 
-#include <iostream>
-#include <fstream>
-#include "worker.h"
-#include "personnel.h"
 #include "finance.h"
 #include "gmo.h"
-#include "sales.h"
+#include "personnel.h"
 #include "production.h"
+#include "sales.h"
+#include "worker.h"
+#include <fstream>
+#include <iostream>
 #define PAUSE system("pause");
 #define FILE_NAME "record.txt"
 
 using namespace std;
 
 class workerManagement {
-public:
-    unsigned int currentNum;
-    Worker ** workerArray;
+  public:
+    int currentNum = 0;
+    Worker **workerArray;
 
     workerManagement();
     ~workerManagement();
@@ -33,10 +33,15 @@ public:
     void searchWorker();
     void resetSystem();
 
-private:
+  private:
+    bool fileisEmpty = false;
     void saveRecord() const;
-
+    int getWorkerNum();
+    void initRecord() const;
+    void sortById();
+    void sortByDept();
+    void sortBySalary();
+    void displayWorker(Worker **, int);
 };
 
-
-#endif //WORKER_MANAGEMENT_WORKERMANAGEMENT_H
+#endif // WORKER_MANAGEMENT_WORKERMANAGEMENT_H
