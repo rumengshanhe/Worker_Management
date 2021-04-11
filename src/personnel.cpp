@@ -14,11 +14,15 @@ Personnel::Personnel(string id, string name, int department, int position, int s
 }
 
 void Personnel::get_Info() {
-    cout << "Worker ID: " << this->w_Id
-        << "\tName: " << this->w_Name
-        << "\tDepartment: " << this->get_Department()
-        << "\tPosition: " << this->get_Position()
-        << "\tSalary: " << this->w_Salary << endl;
+    string deptName;
+    string postName;
+    deptName = this->get_Department();
+    postName = this->get_Position();
+    cout << this->w_Id
+         << "\t" <<this->w_Name
+         << "\t" << deptName
+         << "\t" << postName
+         << "\t" << this->w_Salary << endl;
 }
 string Personnel::get_Department() {
     return "Personnel";
@@ -27,7 +31,7 @@ string Personnel::get_Department() {
 string Personnel::get_Position() {
     switch (this->w_Position) {
         case 1:
-            return "Manager";
+            return "Manager\t";
         case 2:
             return "General Staff";
         default:

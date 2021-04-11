@@ -1,4 +1,33 @@
-/opt/clion/clion-2020.3.2/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /code/Woker_Management
--- Configuring done
--- Generating done
--- Build files have been written to: /code/Woker_Management/cmake-build-debug
+D:\Application\CLion-2020.3.2.win\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/Application/cmake/bin/cmake.exe -DCMAKE_CXX_COMPILER=D:/Application/mingw64/mingw32/bin/g++.exe -G "CodeBlocks - MinGW Makefiles" E:\Code\C++\workermanagement
+-- The C compiler identification is GNU 8.1.0
+-- The CXX compiler identification is GNU 8.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: D:/Application/mingw64/mingw32/bin/gcc.exe
+-- Check for working C compiler: D:/Application/mingw64/mingw32/bin/gcc.exe - broken
+CMake Error at D:/Application/CLion-2020.3.2.win/bin/cmake/win/share/cmake-3.19/Modules/CMakeTestCCompiler.cmake:66 (message):
+  The C compiler
+
+    "D:/Application/mingw64/mingw32/bin/gcc.exe"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp
+    
+    Run Build Command(s):D:/Application/cmake/bin/cmake.exe cmTC_25240/fast && CMake Error: The source directory "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_25240/fast" does not exist.
+    Specify --help for usage, or press the help button on the CMake GUI.
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+See also "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+See also "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeError.log".

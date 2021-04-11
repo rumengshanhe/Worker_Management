@@ -2,10 +2,10 @@
 // Created by root on 2021/3/5.
 //
 
-#ifndef WOKER_MANAGEMENT_WOKER_H
-#define WOKER_MANAGEMENT_WOKER_H
+#ifndef WORKER_MANAGEMENT_WORKER_H
+#define WORKER_MANAGEMENT_WORKER_H
 
-#include <iostream>
+#include <IOSTREAM>
 #include <string>
 
 
@@ -25,4 +25,4 @@ public:
 };
 
 
-#endif //WOKER_MANAGEMENT_WOKER_H
+#endif //WORKER_MANAGEMENT_WORKER_H

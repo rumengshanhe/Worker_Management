@@ -1,3 +1,0 @@
-/code/Woker_Management/cmake-build-debug/CMakeFiles/edit_cache.dir
-/code/Woker_Management/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/code/Woker_Management/cmake-build-debug/CMakeFiles/Woker_Management.dir

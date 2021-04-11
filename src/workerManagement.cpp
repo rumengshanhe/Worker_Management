@@ -5,7 +5,7 @@
 workerManagement::workerManagement() {
     ifstream ifs;
     ifs.open(FILE_NAME, ios::in);
-
+    /* 判断文件是否存在或是否为空*/
     char ch;
     if (!ifs.is_open()) {
         this->fileisEmpty = true;
@@ -14,7 +14,7 @@ workerManagement::workerManagement() {
     if (ifs.eof()) {
         this->fileisEmpty = true;
     }
-    if (this->fileisEmpty == true) {
+    if (this->fileisEmpty) {
         cout << "File is empty or not exist!" << endl;
         PAUSE
         this->currentNum = 0;
@@ -22,7 +22,7 @@ workerManagement::workerManagement() {
         ifs.close();
         return;
     }
-
+    /* 输出当前员工个数 */
     int num = this->getWorkerNum();
     if (num == 1)
         cout << "There is 1 worker record." << endl;
@@ -35,6 +35,7 @@ workerManagement::workerManagement() {
 }
 
 workerManagement::~workerManagement() {
+    /* 清除堆区 */
     if (this->workerArray != nullptr) {
         delete[] this->workerArray;
         this->workerArray = nullptr;
@@ -73,6 +74,7 @@ void workerManagement::saveRecord() const {
 }
 
 int workerManagement::getWorkerNum() {
+    /* 获取文件中员工个数 */
     ifstream ifs;
     ifs.open(FILE_NAME, ios::in);
     string id1;
@@ -90,6 +92,7 @@ int workerManagement::getWorkerNum() {
 }
 
 void workerManagement::initRecord() const {
+    /* 把文件的记录读到结构数组中，完成初始化 */
     ifstream ifs;
     ifs.open(FILE_NAME, ios::in);
     string id2;
@@ -126,49 +129,16 @@ void workerManagement::initRecord() const {
 }
 
 void workerManagement::displayWorker(Worker **displayArray, int displayNum) {
+    /* 打印函数 */
     cout << "ID\tName\tDepartment\tPosition\tSalary\n"
          << "-------------------------------------------------------" << endl;
-    string deptName;
-    string postName;
     for (int i = 0; i < displayNum; i++) {
-        switch (displayArray[i]->w_Department) {
-        case 1:
-            deptName = "GMO";
-            if (displayArray[i]->w_Position == 1) {
-                postName = "\tCEO\t";
-            } else {
-                postName = "\tSecretary";
-            }
-            break;
-        case 2:
-            deptName = "Personel";
-            break;
-        case 3:
-            deptName = "Finance";
-            break;
-        case 4:
-            deptName = "Sales\t";
-            break;
-        case 5:
-            deptName = "Production";
-            break;
-        default:
-            break;
-        }
-        if (displayArray[i]->w_Department != 1) {
-            if (displayArray[i]->w_Position == 1) {
-                postName = "Manager";
-            } else {
-                postName = "General Staff";
-            }
-        }
-        cout << displayArray[i]->w_Id << "   " << displayArray[i]->w_Name
-             << "  \t" << deptName << "  \t" << postName << "  \t"
-             << displayArray[i]->w_Salary << endl;
+        displayArray[i]->get_Info();
     }
 }
 
 void workerManagement::sortById() {
+    /* 按ID排序输出 */
     Worker **sortArray = new Worker *[this->currentNum];
     for (int i = 0; i < this->currentNum; i++) {
         sortArray[i] = this->workerArray[i];
@@ -189,6 +159,7 @@ void workerManagement::sortById() {
 }
 
 void workerManagement::sortByDept() {
+    /* 按部门排序输出 */
     Worker **sortArray = new Worker *[this->currentNum];
     for (int i = 0; i < this->currentNum; i++) {
         sortArray[i] = this->workerArray[i];
@@ -207,6 +178,7 @@ void workerManagement::sortByDept() {
 }
 
 void workerManagement::sortBySalary() {
+    /* 按薪资排序输出 */
     Worker **sortArray = new Worker *[this->currentNum];
     for (int i = 0; i < this->currentNum; i++) {
         sortArray[i] = this->workerArray[i];
@@ -227,6 +199,7 @@ void workerManagement::sortBySalary() {
 }
 
 void workerManagement::addWorker() {
+    /* 添加员工 */
     cout << "How many workers added ?\n_# ";
     int addNum = 0;
     int newNum;
@@ -307,15 +280,16 @@ void workerManagement::addWorker() {
             cout << "Successfully add " << addNum << " workers" << endl;
     }
     this->fileisEmpty = false;
-    /*****  保存文件  *****/
+    //  保存文件
     this->saveRecord();
     PAUSE
 }
 
 void workerManagement::showWorkers() {
+    /* 显示员工信息 */
     int select = 0;
     cout << "How to display ?\n"
-         << "1.Sort by ID - 2.Srot by Department - 3.Sort by Salary\n_# ";
+         << "1.Sort by ID - 2.Sort by Department - 3.Sort by Salary\n_# ";
     cin >> select;
     switch (select) {
     case 1:
@@ -333,6 +307,7 @@ void workerManagement::showWorkers() {
 }
 
 void workerManagement::deleteWorker() {
+    /* 删除员工 */
     string deleteStr;
     int num = 0;
     int *index = new int[this->currentNum];
@@ -373,6 +348,7 @@ void workerManagement::deleteWorker() {
 }
 
 void workerManagement::editWorker() {
+    /* 编辑员工信息 */
     string editStr;
     int num = 0;
     int *index = new int[this->currentNum];
@@ -447,6 +423,7 @@ void workerManagement::editWorker() {
 }
 
 void workerManagement::searchWorker() {
+    /* 检索员工信息 */
     string searchStr;
     int index = 0;
     Worker **searchArray = new Worker *[this->currentNum];
@@ -464,6 +441,7 @@ void workerManagement::searchWorker() {
 }
 
 void workerManagement::resetSystem() {
+    /***重置，抹除所有数据***/
     cout << "Confirm to Delete All Record !!! (y/n)\n_# ";
     char ch;
     cin >> ch;

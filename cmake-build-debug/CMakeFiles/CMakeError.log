@@ -1,0 +1,49 @@
+Determining if the C compiler works failed with the following output:
+Change Dir: E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Application/cmake/bin/cmake.exe cmTC_75b8c/fast && CMake Error: The source directory "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_75b8c/fast" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Application/cmake/bin/cmake.exe cmTC_70e52/fast && CMake Error: The source directory "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_70e52/fast" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Application/cmake/bin/cmake.exe cmTC_37c12/fast && CMake Error: The source directory "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_37c12/fast" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Application/cmake/bin/cmake.exe cmTC_0734e/fast && CMake Error: The source directory "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_0734e/fast" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+
+Detecting C compiler ABI info failed to compile with the following output:
+Change Dir: E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Application/cmake/bin/cmake.exe cmTC_4ea56/fast && CMake Error: The source directory "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_4ea56/fast" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+
+
+Determining if the C compiler works failed with the following output:
+Change Dir: E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/Application/cmake/bin/cmake.exe cmTC_25240/fast && CMake Error: The source directory "E:/Code/C++/workermanagement/cmake-build-debug/CMakeFiles/CMakeTmp/cmTC_25240/fast" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+
+

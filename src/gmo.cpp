@@ -13,21 +13,25 @@ GMO::GMO(string id, string name, int department, int position, int salary) {
 }
 
 void GMO::get_Info() {
-    cout << "Worker ID: " << this->w_Id
-         << "\tName: " << this->w_Name
-         << "\tDepartment: " << this->get_Department()
-         << "\tPosition: " << this->get_Position()
-         << "\tSalary: " << this->w_Salary << endl;
+    string deptName;
+    string postName;
+    deptName = this->get_Department();
+    postName = this->get_Position();
+    cout << this->w_Id
+         << "\t" <<this->w_Name
+         << "\t" << deptName << "\t"
+         << "\t" << postName
+         << "\t" << this->w_Salary << endl;
 }
 
 string GMO::get_Department() {
-    return "General Manager Office";
+    return "GMO";
 }
 
 string GMO::get_Position() {
     switch (this->w_Position) {
         case 1:
-            return "CEO";
+            return "CEO\t";
         case 2:
             return "Secretary";
         default:

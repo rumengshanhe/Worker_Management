@@ -1,0 +1,37 @@
+[
+{
+  "directory": "E:/Code/C++/workermanagement/build",
+  "command": "D:\\Application\\mingw64\\mingw32\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.exe.dir\\src\\main.cpp.obj -c E:\\Code\\C++\\workermanagement\\src\\main.cpp",
+  "file": "E:/Code/C++/workermanagement/src/main.cpp"
+},
+{
+  "directory": "E:/Code/C++/workermanagement/build",
+  "command": "D:\\Application\\mingw64\\mingw32\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.exe.dir\\src\\workerManagement.cpp.obj -c E:\\Code\\C++\\workermanagement\\src\\workerManagement.cpp",
+  "file": "E:/Code/C++/workermanagement/src/workerManagement.cpp"
+},
+{
+  "directory": "E:/Code/C++/workermanagement/build",
+  "command": "D:\\Application\\mingw64\\mingw32\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.exe.dir\\src\\personnel.cpp.obj -c E:\\Code\\C++\\workermanagement\\src\\personnel.cpp",
+  "file": "E:/Code/C++/workermanagement/src/personnel.cpp"
+},
+{
+  "directory": "E:/Code/C++/workermanagement/build",
+  "command": "D:\\Application\\mingw64\\mingw32\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.exe.dir\\src\\finance.cpp.obj -c E:\\Code\\C++\\workermanagement\\src\\finance.cpp",
+  "file": "E:/Code/C++/workermanagement/src/finance.cpp"
+},
+{
+  "directory": "E:/Code/C++/workermanagement/build",
+  "command": "D:\\Application\\mingw64\\mingw32\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.exe.dir\\src\\gmo.cpp.obj -c E:\\Code\\C++\\workermanagement\\src\\gmo.cpp",
+  "file": "E:/Code/C++/workermanagement/src/gmo.cpp"
+},
+{
+  "directory": "E:/Code/C++/workermanagement/build",
+  "command": "D:\\Application\\mingw64\\mingw32\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.exe.dir\\src\\sales.cpp.obj -c E:\\Code\\C++\\workermanagement\\src\\sales.cpp",
+  "file": "E:/Code/C++/workermanagement/src/sales.cpp"
+},
+{
+  "directory": "E:/Code/C++/workermanagement/build",
+  "command": "D:\\Application\\mingw64\\mingw32\\bin\\g++.exe   -g -std=gnu++2a -o CMakeFiles\\main.exe.dir\\src\\production.cpp.obj -c E:\\Code\\C++\\workermanagement\\src\\production.cpp",
+  "file": "E:/Code/C++/workermanagement/src/production.cpp"
+}
+]

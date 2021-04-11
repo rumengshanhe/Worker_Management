@@ -2,5 +2,6 @@
     "files.associations": {
         "new": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "files.encoding": "gb2312"
 }

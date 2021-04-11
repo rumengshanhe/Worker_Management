@@ -2,8 +2,8 @@
 // Created by root on 2021/3/10.
 //
 
-#ifndef WOKER_MANAGEMENT_GMO_H
-#define WOKER_MANAGEMENT_GMO_H
+#ifndef WORKER_MANAGEMENT_GMO_H
+#define WORKER_MANAGEMENT_GMO_H
 
 #include "worker.h"
 
@@ -20,4 +20,4 @@ public:
 };
 
 
-#endif //WOKER_MANAGEMENT_GMO_H
+#endif //WORKER_MANAGEMENT_GMO_H

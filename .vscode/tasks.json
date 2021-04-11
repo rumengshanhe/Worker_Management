@@ -5,13 +5,13 @@
             "label": "g++.exe build active file",
             "command": "g++",
             "args": [
-                "-g",
-                "${file}",
+                "-O3",
+                "${workspaceFolder}\\src\\*.cpp",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "${workspaceFolder}\\main.exe"
             ],
             "options": {
-                "cwd": "E:\\msys2_64\\mingw64\\bin"
+                "cwd": "D:\\Application\\mingw64\\mingw32\\bin"
             },
             "problemMatcher": [
                 "$gcc"
