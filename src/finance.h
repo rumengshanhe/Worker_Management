@@ -2,8 +2,8 @@
 // Created by root on 2021/3/10.
 //
 
-#ifndef WOKER_MANAGEMENT_FINANCE_H
-#define WOKER_MANAGEMENT_FINANCE_H
+#ifndef WORKER_MANAGEMENT_FINANCE_H
+#define WORKER_MANAGEMENT_FINANCE_H
 
 #include "worker.h"
 
@@ -20,4 +20,4 @@ public:
 };
 
 
-#endif //WOKER_MANAGEMENT_FINANCE_H
+#endif //WORKER_MANAGEMENT_FINANCE_H

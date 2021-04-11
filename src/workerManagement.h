@@ -12,6 +12,7 @@
 #include "worker.h"
 #include <fstream>
 #include <iostream>
+//∫Í∂®“Â
 #define PAUSE system("pause");
 #define FILE_NAME "record.txt"
 

@@ -17,6 +17,7 @@ public:
     virtual void get_Info();
     virtual string get_Department();
     virtual string get_Position();
+
 };
 
 

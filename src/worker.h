@@ -8,7 +8,7 @@
 #include <IOSTREAM>
 #include <string>
 
-
+//职工基(父)类
 using namespace std;
 
 class Worker {
