@@ -6,7 +6,7 @@ int main() {
     workerManagement management;
     int select = 9;
     while (true) {
-        system("cls");
+        system("cls");  //ÇåÆÁ
         workerManagement::drawMenu();
         cin >> select;
         switch (select) {
